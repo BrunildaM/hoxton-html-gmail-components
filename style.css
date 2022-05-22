@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    grid-template: 
+    'header header header header' auto
+    'left-menu emails settings shortcuts' 1fr /
+    180px 1fr 180px auto;
+}
+
+.header{
+    grid-area: header;
+    background-color: white;
+    place-content: center;
+    border-bottom: 0.5rem;
+    border-bottom-color: darkgrey;
+    margin: 0.5rem;
+}
+
+.menu { display: grid;
+    float: left;
+    place-items: center;
+
+}
+
+.search {display: grid;
+    place-content: center;
+}
+
+
+.icons { display: grid;
+    float: right;
+}
+
+
+.left-menu {
+    grid-area: left menu;
+    background-color: white;
+    overflow-y: scroll
+
+}
+
+.mails-menu {
+    display: contents;
+}
+
+.number {
+    float: right;
+}
+.compose {
+    border-radius: 24px;
+    place-items: center;
+    padding: 0.5rem;
+    margin: 0.5rem auto 1rem 0.3rem;
+}
+
+.types { 
+    place-content: center;
+    padding: 0.5rem;
+}
+
+.Meet {
+    display: grid;
+    padding: 0.5rem 1rem 0.5rem 0.5rem;
+    border-top-style: inset;
+    border-bottom-style: inset;
+    border-bottom-color: dimgray;
+}
+
+.Chat {
+    display: grid;
+    padding: auto;
+    border-bottom-style: inset;
+}
+
+.hangout { display: grid;
+    place-content: center;
+
+}
+
+
+.emails {
+    grid-area: emails;
+    background-color: white;
+    overflow-y: scroll
+}
+
+.settings {
+    grid-area: settings;
+    background-color: white;
+}
+
+.set-button {display: grid;
+  text-decoration: aqua;
+  margin: 1rem;
+}
+
+.density {
+    display: grid;
+   list-style: none;
+   border-bottom: 1cm;
+   border-color: gray;
+   margin: 1rem;
+}
+
+.shortcuts {
+    grid-area: shortcuts;
+    background-color: white;
+}
+
+.short {
+    display: grid;
+    border-bottom: 1cm;
+    border-bottom-color: darkgrey;
+    place-items: center;
+    margin: 1rem;
+    list-style-type: none;
+}
+
+.add {
+    display: grid;
+    place-content: center;
+    margin: 1rem;
+}
+
+@media screen and (max-width: 740px) {
+    body {
+        grid-template: 
+        'header header header' auto
+        'left-menu emails settings' 1fr /
+        180px 1fr 180px;
+    }
+
+    .shortcuts {
+        display: none;
+        
+    }
+}
+
+@media screen and (max-width: 670px) {
+    body {
+        grid-template: 
+        'header header' auto
+        'left-menu emails' 1fr 
+        'left-menu settings' 150px/
+        180px 1fr;
+    }
+        
+    }
+
+    @media screen and (max-width: 500px) {
+        body {
+            grid-template: 
+            'header header' auto
+            'left-menu emails' 1fr 
+            'settings settings' 150px/
+            50px 1fr;
+        }  
+        
+    }
+    
